@@ -1,8 +1,8 @@
 
 .Note {
   --note-height: 88px;
-  background-color: #010d1e;
-  color: #cacaca;
+  background-color: blue;
+  color: crimson;
   height: var(--note-height);
   margin-bottom: 8px;
   max-width: 380px;
@@ -12,7 +12,7 @@
 
 .Note__delete {
   --note-button-height: 32px;
-  background-color: #041a3a;
+  background-color: YELLOW;
   border: 0;
   color: #bdbcbc;
   float: right;

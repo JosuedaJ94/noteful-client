@@ -11,7 +11,7 @@
 }
 
 .App__nav {
-  background-color: #0b1b32;
+  background-color: blue;
   color: #fff;
   grid-area: sidebar;
   height: 100vh;
