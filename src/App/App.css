@@ -19,7 +19,7 @@
 }
 
 .App__header {
-  background-color: #0b1f3a;
+  background-color: blue;
   color: #bdbdbd;
   font-family: var(--custom-font);
   grid-area: header;

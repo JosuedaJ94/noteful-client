@@ -3,16 +3,29 @@ import { Link } from 'react-router-dom'
 import { format } from 'date-fns'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './Note.css'
+import AppContext from '../AppContext'
 
 export default function Note(props) {
   return (
-    <div className='Note'>
-      <h2 className='Note__title'>
+    <AppContext.Consumer>
+      {value => {
+        function onDelete(){
+          fetch("http://localhost:9090/notes/" + props.id, {
+            method: "delete"
+          })
+          .then(response => {
+            value.getData()
+            props.history.push("/")
+          })
+        }
+        return (
+          <div className='Note'>
+            <h2 className='Note__title'>
         <Link to={`/note/${props.id}`}>
           {props.name}
         </Link>
       </h2>
-      <button className='Note__delete' type='button'>
+      <button onClick={onDelete} className='Note__delete' type='button'>
         <FontAwesomeIcon icon='trash-alt' />
         {' '}
         remove
@@ -27,5 +40,9 @@ export default function Note(props) {
         </div>
       </div>
     </div>
+        )
+      }}
+    </AppContext.Consumer>
+    
   )
 }
