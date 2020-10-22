@@ -51,3 +51,4 @@ export default function NoteListNav(props) {
 NoteListNav.defaultProps = {
   folders: []
 }
+

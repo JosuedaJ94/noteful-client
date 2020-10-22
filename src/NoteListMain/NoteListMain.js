@@ -6,6 +6,7 @@ import CircleButton from '../CircleButton/CircleButton'
 import './NoteListMain.css'
 import AppContext from "../AppContext";
 import {getNotesForFolder, findNote, findFolder} from '../notes-helpers';
+import PropTypes from 'prop-types'
 
 export default function NoteListMain(props) {
   
@@ -54,4 +55,10 @@ export default function NoteListMain(props) {
 
 NoteListMain.defaultProps = {
   notes: [],
+}
+Note.propTypes = {
+
+  history: PropTypes.any,
+  match: PropTypes.any
+  
 }

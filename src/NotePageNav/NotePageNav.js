@@ -4,7 +4,8 @@ import CircleButton from '../CircleButton/CircleButton'
 import './NotePageNav.css'
 import AppContext from '../AppContext'
 import {getNotesForFolder, findNote, findFolder} from '../notes-helpers';
-
+import PropTypes from 'prop-types'
+import Note from '../Note/Note'
 
 export default function NotePageNav(props) {
   return (
@@ -43,4 +44,10 @@ NotePageNav.defaultProps = {
   history: {
     goBack: () => { }
   }
+}
+
+Note.propTypes = {
+  
+  history: PropTypes.any,
+  match: PropTypes.any
 }
