@@ -41,7 +41,7 @@ export default class AddFolder extends Component {
     render() {
         return (
             <form onSubmit={this.onAddFolder}>
-                <input name="folderName" required />
+                <input name="folderName" isRequired />
                 <button type="submit">Add Folder</button>
                 <div>
                     {this.state.error}
