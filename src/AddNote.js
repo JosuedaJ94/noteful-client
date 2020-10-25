@@ -50,9 +50,9 @@ export default class AddNote extends Component {
                     {this.state.error}
                 </div>
                 <label for="name">Name: </label>
-                <input name="name" isRequired />
+                <input name="name" required />
                 <label for="content">Content: </label>
-                <input name="content" isRequired/>
+                <input name="content" required/>
                 <label for="folderId">Folder: </label>
                 <select name="folderId">
                     {this.context.folders.map(folder => <option value={folder.id}>{folder.name}</option>)}
